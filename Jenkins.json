@@ -1,9 +1,23 @@
 {
+    
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::758181067640:role/cloudform",
+        ]
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
         "ECSCluster": {
             "Type": "AWS::ECS::Cluster"
-            "executionRoleArn": "arn:aws:iam::758181067640:role/cloudform",
+            
         }
     },
     
